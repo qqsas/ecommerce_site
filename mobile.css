@@ -1,0 +1,435 @@
+/* mobile.css */
+
+/* Reset some Bootstrap spacing for small screens */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.custom-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 1000;
+}
+
+.custom-navbar .container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.custom-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.custom-navbar .navbar-brand img {
+    height: 24px;
+    margin-right: 8px;
+}
+
+.custom-navbar .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.custom-navbar .nav-item {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.custom-navbar .nav-link {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.custom-navbar .nav-link:hover {
+    background-color: #e9e9e9;
+}
+
+.custom-navbar .nav-link.d-flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-number {
+    background-color: #dc3545;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-left: 6px;
+}
+
+/* Responsive collapse behavior - emulating a basic toggle menu */
+@media (max-width: 768px) {
+    .custom-navbar .navbar-nav {
+        display: none;
+    }
+
+    .custom-navbar.active .navbar-nav {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+}
+
+/* Hide toggle button on larger screens */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .custom-navbar .navbar-nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .custom-navbar .nav-item {
+        margin: 0 8px;
+        width: auto;
+    }
+
+    .custom-navbar .nav-link {
+        background-color: transparent;
+        padding: 6px 8px;
+    }
+
+    .custom-navbar .nav-link:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+/* Toggle button (hamburger menu) */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 80px;
+    z-index: 1100;
+}
+
+/* Hide toggle button on desktop */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none!important;
+    }
+}
+
+/* seller-mobile.css */
+
+/* Reset for mobile */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.seller-nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 1000;
+}
+
+.seller-nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.seller-nav-brand {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.seller-nav-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.seller-nav-list .nav-item {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.seller-nav-list .nav-link {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.seller-nav-list .nav-link:hover {
+    background-color: #e9e9e9;
+}
+
+/* Mobile toggle functionality */
+@media (max-width: 768px) {
+    .seller-nav-list {
+        display: none;
+    }
+
+    .seller-nav-container.active .seller-nav-list {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .seller-nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .seller-nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .seller-nav-list .nav-item {
+        margin: 0 8px;
+        width: auto;
+    }
+
+    .seller-nav-list .nav-link {
+        background-color: transparent;
+        padding: 6px 8px;
+    }
+
+    .seller-nav-list .nav-link:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+/* Toggle button */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 80px;
+    z-index: 1100;
+}
+
+/* Hide toggle button on desktop */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #333;
+        cursor: pointer;
+        position: absolute;
+        top: 12px;
+        right: 80px;
+        z-index: 1100;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+/* Hide seller nav list on mobile */
+@media (max-width: 768px) {
+    .seller-nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        padding-left: 0;
+    }
+
+    .seller-nav-list.active {
+        display: flex;
+    }
+
+    .seller-nav-list .nav-item {
+        width: 100%;
+    }
+
+    .seller-nav-list .nav-link {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        background-color: #f9f9f9;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #333;
+        cursor: pointer;
+        position: absolute;
+        top: 12px;
+        right: 80px;
+        z-index: 1001;
+    }
+}
+
+/* On desktop: show menu, hide toggle */
+@media (min-width: 769px) {
+    .seller-nav-list {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .seller-nav-list .nav-link {
+        background: none;
+        border: none;
+        padding: 6px 12px;
+    }
+}
+@media (max-width: 768px) {
+  .custom_table {
+    width: 100% !important;
+    display: block !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+    box-sizing: border-box;
+  }
+
+  .custom_table table {
+    width: 100% !important;
+    min-width: 600px; /* adjust based on content */
+    border-collapse: collapse;
+  }
+
+  .custom_table th,
+  .custom_table td {
+    white-space: nowrap !important;
+    text-align: left;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+}
+
+/* Base style for all tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+/* Table cells and headers */
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Optional: style table headers */
+thead {
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+/* 🔽 Make all tables responsive on smaller screens */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    thead, tbody, th, td, tr {
+        white-space: nowrap;
+    }
+}
